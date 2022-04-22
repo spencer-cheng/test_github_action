@@ -1,0 +1,17 @@
+name: learn_github_actions
+
+on: [push]
+jobs: # groups all the jobs that run in the workflow
+  check-bats-version: # define a job named check-bats-version
+    runs-on: ubuntu-latest
+    steps: 
+      # the use keyword specifies that this step will run v3 of the actions/checkout action
+      # check out repository
+      - uses: actions/checkout@v3 
+      # this steps install the specified version of python
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+          archítecture: 'x64'
+      - run: python python_test.py
+
