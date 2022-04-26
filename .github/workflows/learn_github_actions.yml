@@ -2,7 +2,7 @@ name: learn_github_actions
 
 on: [push]
 jobs: # groups all the jobs that run in the workflow
-  check-python-version: # define a job named check-python-version
+  check-python-version: # define a job named check-pythons-version
     runs-on: ubuntu-latest
     steps: 
       # the use keyword specifies that this step will run v3 of the actions/checkout action
@@ -16,7 +16,7 @@ jobs: # groups all the jobs that run in the workflow
       - run: python python_test.py
       - name: "test my own action"
         id: hello
-        uses: ./
+        uses: spencer-cheng/github_action_docker_toy@v1
         with: 
           who-to-greet: "spencer"
       - name: Get the output time
