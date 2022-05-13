@@ -1,6 +1,6 @@
 name: learn_github_actions
 
-on: [push]
+on: [push, workflow_dispatch]
 jobs: # groups all the jobs that run in the workflow
   check-python-version: # define a job named check-pythons-version
     runs-on: ubuntu-latest
