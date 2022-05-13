@@ -14,11 +14,4 @@ jobs: # groups all the jobs that run in the workflow
           python-version: '3.8'
           archítecture: 'x64'
       - run: python python_test.py
-      - name: "test my own action"
-        id: hello
-        uses: spencer-cheng/github_action_docker_toy@v1
-        with: 
-          who-to-greet: "spencer"
-      - name: Get the output time
-        run: echo "The time was ${{steps.hello.outputs.time}}"
 
