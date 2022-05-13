@@ -1,4 +1,4 @@
 import sys
 
-print("hello")
+print("hello, world")
 print(sys.version)
